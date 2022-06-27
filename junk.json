@@ -1,0 +1,13 @@
+{
+    "username": "abc",
+    "domain": "gmail.apjd",
+    "emailAddress": "abc@gmail.apjd",
+    "formatCheck": "true",
+    "dnsCheck": "false",
+    "freeCheck": "false",
+    "disposableCheck": "false",
+    "audit": {
+        "auditCreatedDate": "2022-03-19 21:01:14 UTC",
+        "auditUpdatedDate": "2022-03-19 21:01:14 UTC"
+    }
+}

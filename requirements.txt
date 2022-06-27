@@ -1,0 +1,8 @@
+gdshortener
+requests
+instagramy
+python-telegram-bot
+imgbbpy
+qrcode
+telegram
+json
