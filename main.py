@@ -11,7 +11,7 @@ import os, time, random
 
 s = gdshortener.ISGDShortener()
 
-apiKey = '5196000920:AAECLxm23glDzqVUXVhbJkkwyzuH-jzTHIU'
+apiKey = 'YOUR_TELEGRAM_BOT_TOKEY_KEY'
 
 # Credit Variable for Re-use
 credit = f"<b>┏━━━━━━━━━━━━━━━</b>\n<b>🙋🏻‍♂️ Bot By @amoux_sh</b>\n<b>┗━━━━━━━━━━━━━━━</b>\n"
@@ -82,7 +82,7 @@ def instaFinder(update, context):
         try:
             preview = "<pre>🔍 Collecting user info...</pre>\n"
             context.bot.sendMessage(chat_id=update.message.chat_id, text=preview)
-            session_id = "48626132060%3ANEJF9mN98iWUNA%3A18"
+            session_id = "YOUR_SESSION_ID"
             user = InstagramUser(username, sessionid=session_id)
 
 
@@ -198,7 +198,7 @@ def randomUser(update, context):
 def imgUpload(update, context):
     try:
         context.bot.sendMessage(chat_id=update.message.chat_id, text="<pre>Collecting the data...</pre>")
-        client = imgbbpy.SyncClient("68298aca2086db30ceca4fe57ef4558e")
+        client = imgbbpy.SyncClient("!!!YOUR_TOKEN_HERE!!!")
         def rainbow():
             context.bot.deleteMessage(chat_id=update.message.chat_id, message_id=update.message.message_id+1)
             preview = "<pre>Uploading the image...🟥</pre>"
@@ -284,7 +284,7 @@ def text2QrCode(update, context):
 def whoisLookup(update, context):
     if len(context.args) > 0:
         domain = context.args[0]
-        whoIs = requests.get(f"https://api.ip2whois.com/v2?key=E9S1CSDLISDZBYD2D8IDE95FKYOXKAJV&domain={domain}").text
+        whoIs = requests.get(f"https://api.ip2whois.com/v2?key=[YOUR_TOKEN_HERE]&domain={domain}").text
         whoIs = json.loads(whoIs)
 
         response =  "<b>┏━━━━━━━━━━━━━━━</b>\n"
@@ -311,7 +311,7 @@ def whoisLookup(update, context):
 def emailValidator(update, context):
     if len(context.args) > 0:
         email = context.args[0].lower()
-        validOrNot = requests.get(f"https://emailverification.whoisxmlapi.com/api/v2?apiKey=at_W1nLJhm2gJKwYQ8RjsYUhA7fq20wp&emailAddress={email}").text
+        validOrNot = requests.get(f"https://emailverification.whoisxmlapi.com/api/v2?apiKey=[YOUR_TOKEN_HERE]&emailAddress={email}").text
         validOrNot = json.loads(validOrNot)
 
         response =  "<b>┏━━━━━━━━━━━━━━━</b>\n"
@@ -401,7 +401,7 @@ def tiktokDownloader(update, context):
     querystring = {"url":userLink}
     headers = {
 	    "X-RapidAPI-Host": "tiktok-downloader-download-tiktok-videos-without-watermark.p.rapidapi.com",
-	    "X-RapidAPI-Key": "0d5a53bf68msh8068e5fbc3fc0c7p1703aajsn01682edf5cf2"
+	    "X-RapidAPI-Key": "[YOUR_TOKEN_HERE]"
     }
     result = requests.request("GET", url, headers=headers, params=querystring).text
     result = json.loads(result)
@@ -432,7 +432,7 @@ def YTDownloader(update, context):
     querystring = {"id":videoID}
     headers = {
         "X-RapidAPI-Host": "youtube-mp3-download1.p.rapidapi.com",
-        "X-RapidAPI-Key": "0d5a53bf68msh8068e5fbc3fc0c7p1703aajsn01682edf5cf2"
+        "X-RapidAPI-Key": "[YOUR_TOKEN_HERE]"
     }
     audioResult = requests.request("GET", url, headers=headers, params=querystring).text
     audioResult = json.loads(audioResult)
